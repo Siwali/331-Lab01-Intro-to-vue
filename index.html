@@ -15,7 +15,13 @@
     <div class="nav-bar"></div>
     <div class="product-display">
         <div class="product-container">
-            <div class="product-name">
+            <div class="product-info">
+                <h1>{{product}}</h1>
+                <p v-if="inventory > 10">In Stock</p>
+                <p v-else-if="inventory <= 10 && inventory > 0">Almost out of stock</p>
+                <p v-else>Out of Stock</p>
+                <p v-if="onSale">On Sale</p>
+                <p v-else>Not on Sale</p>
                 <a :href="productLink" target="_blank">{{productName}}</a>
             </div>
             <div class="product-image">
