@@ -8,8 +8,18 @@ createApp({
         const inStock = ref(false)
         const inventory = ref(5)
         const onSale = ref(true)
+        const details = ref([
+            '50% cotton',
+            '30% wool',
+            '20% polyester'
+        ])
+        const variants = ref([
+            { id: 2234, color: 'green'},
+            { id: 2235, color: 'blue'}
+        ])
+        const sizes = ref(['S','M','L'])
         return {
-            product,image,productLink,productName,inStock,inventory,onSale
+            product,image,productLink,productName,inStock,inventory,onSale,details,variants,sizes
         }
     }
 }).mount('#app')
